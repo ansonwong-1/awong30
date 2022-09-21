@@ -1,7 +1,7 @@
-SS AFK
-Anson Wong, Faiza Huda, Kevin Xiao
-Codingbat Warmup2
-9/21/22
+#SS AFK
+#Anson Wong, Faiza Huda, Kevin Xiao
+#9/21/22
+#Codingbat Warmup-2
 '''
 Given a string and a non-negative int n, return a larger string that is n copies of the original string.
 '''
@@ -88,7 +88,7 @@ return the number of 9's in the array.
 '''
 def array_count9(nums):
   counter = 0
-  for i in nums:
+  for i in nums: #can loop through an array without index
     if i == 9:
       counter +=1
   return counter
@@ -98,23 +98,61 @@ print(array_count9([1,2,9])) #should return 1
 print(array_count9([9,9,9,9,9,9,9])) #should return 7
 print(array_count9([0,23,4])) #should return 0
   
+'''
+Given an array of ints,
+return True if one of the first 4 elements in the array is a 9.
+The array length may be less than 4.
+'''
 def array_front9(nums):
   if len(nums) < 4:
     for i in nums:
       if i == 9:
         return True
-        
     return False
   else:
     for i in range(0,4):
       if nums[i] == 9:
         return True
-        
     return False
+
+print("Test cases for array_front9")
+print(array_front9([])) #should return False
+print(array_front9([9])) #should return True
+print(array_front9([2,3,-4,3,9])) #should return False
+print(array_front9([3,4,2,9,2,10])) #should return True
     
+'''
+Given an array of ints, return True
+if the sequence of numbers 1, 2, 3 appears in the array somewhere.
+'''
 def array123(nums):
   for i in range(len(nums)-2):
     if nums[i] == 1 and nums[i+1] == 2 and nums[i+2] == 3:
       return True
   return False
-  
+
+print("Test cases for array123")
+print(array123([-3,2,1,2,3])) #should return True
+print(array123([3,2,1])) #should return False
+print(array123([1,2])) #should return False
+print(array123([])) #should return False
+
+'''
+Given 2 strings, a and b,
+return the number of the positions where they contain the same length 2 substring.
+So "xxcaazz" and "xxbaaz" yields 3,
+since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+'''
+def string_match(a, b):
+  less = min(len(a), len(b))
+  count = 0
+  for i in range(less - 1):
+    if (a[i:i+2] == b[i:i+2]):
+      count+=1  
+  return count
+
+print("Test cases for string_match")
+print(string_match('','Hello')) #should return 0
+print(string_match('Hello', '')) #should return 0
+print(string_match('jfhiheho', 'hiheho')) #should return 0
+print(string_match('hiheooho', 'hiheiiho')) #should return 4
