@@ -3,13 +3,17 @@ SS AFK | Anson Wong, Faiza Huda, Kevin Xiao, Truthful Tom, Faizem, FamousMrTable
 Softdev P2
 '''
 '''
-DISCO: Typecasting is done with type(<what you're converting>)
-QCC: We found it easier to convert to lists.
-What built-in methods are there for dictionaries?
+DISCO:
+- Typecasting is done with type(<what you're converting>)
+- We got a random integer by importing random and using the function random.randint
+QCC:
+- We found it easier to convert to lists.
+- What built-in methods are there for dictionaries?
 (especially ones that could shorten what we did)
-Is there a difference in getting a random devo from a list of all devos vs
+- Is there a difference in getting a random devo from a list of all devos vs
 getting a random key and then a random value?
-OPS SUMMARY: We decided to make a list of the keys and then randomly choose from that list
+OPS SUMMARY:
+We decided to make a list of the keys and then randomly choose from that list
 because they aren't numerically sequential. After that, we got a random index for both 
 the list of keys and the list of values. With those, we got a random devo in a random period. 
 '''
