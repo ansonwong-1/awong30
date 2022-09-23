@@ -22,9 +22,10 @@ the list of keys and the list of values. With those, we got a random devo in a r
 For this one, we printed the period by printing the random key.
 We also used a second method where we made a list of all devos and selected 
 a random index of that list. For the period, we found that out by seeing if the
-random index was less than the n
+random index was less than the number of students in that period and the periods
+before it. 
 '''
-
+#clean up line 25
 import random
 
 krewes = {
@@ -50,13 +51,13 @@ for i in krewes:
 
 indice = random.randint(0,len(allDevos)-1)
 period = 2
-for j in range(2):
-    for i in krewes:
-        #print(i)
-        if (indice < len(krewes[i])):
-            #print(len(krewes[i]))
-            period = i
-
+stud2 = len(krewes[listofkeys[0]])
+stud7 = len(krewes[listofkeys[1]])
+stud8 = len(krewes[listofkeys[2]])
+if (indice > stud2):
+    period = 7
+    if (indice > stud2 + stud7):
+        period = 8
 print(allDevos[indice] + " Of Period " + str(period)) #not sure if this works -Anson
 
 
