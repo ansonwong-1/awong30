@@ -19,6 +19,10 @@ OPS SUMMARY:
 We decided to make a list of the keys and then randomly choose from that list
 because they aren't numerically sequential. After that, we got a random index for both 
 the list of keys and the list of values. With those, we got a random devo in a random period. 
+For this one, we printed the period by printing the random key.
+We also used a second method where we made a list of all devos and selected 
+a random index of that list. For the period, we found that out by seeing if the
+random index was less than the n
 '''
 
 import random
@@ -46,11 +50,12 @@ for i in krewes:
 
 indice = random.randint(0,len(allDevos)-1)
 period = 2
-for i in krewes:
-    #print(i)
-    if (indice < len(krewes[i])):
-        #print(len(krewes[i]))
-        period = i
+for j in range(2):
+    for i in krewes:
+        #print(i)
+        if (indice < len(krewes[i])):
+            #print(len(krewes[i]))
+            period = i
 
 print(allDevos[indice] + " Of Period " + str(period)) #not sure if this works -Anson
 
