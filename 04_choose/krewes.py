@@ -1,6 +1,9 @@
 '''
 SS AFK | Anson Wong, Faiza Huda, Kevin Xiao, Truthful Tom, Faizem, FamousMrTable 
-Softdev P2
+Softdev 
+K04 -- Dictionaries
+2022-09-22
+time spent: 0.8
 '''
 '''
 DISCO:
@@ -20,11 +23,20 @@ the list of keys and the list of values. With those, we got a random devo in a r
 
 import random
 
-krewes = {2:['1', '2', '3'], 7:['4', '5', '6'], 8:['7', '8', '9']}
+# original placeholder krewes
+#krewes = {2:['1', '2', '3'], 7:['4', '5', '6'], 8:['7', '8', '9']}
 
-listofkeys= list(krewes.keys())
-keyIndice = random.randint(0,2)
-valueIndice = random.randint(0,2)
+krewes = {
+           2:["NICHOLAS",  "ANTHONY",  "BRIAN",  "SAMUEL",  "JULIA",  "YUSHA",  "CORINA",  "CRAIG",  "FANG MIN",  "JEFF",  "KONSTANTIN",  "AARON",  "VIVIAN",  "AYMAN",  "TALIA",  "FAIZA",  "ZIYING",  "YUK KWAN",  "DANIEL",  "WEICHEN",  "MAYA",  "ELIZABETH",  "ANDREW",  "VANSH",  "JONATHAN",  "ABID",  "WILLIAM",  "HUI",  "ANSON",  "KEVIN",  "DANIEL",  "IVAN",  "JASMINE",  "JEFFREY"], 
+           7:["DIANA",  "DAVID",  "SAM",  "PRATTAY",  "ANNA",  "JING YI",  "ADEN",  "EMERSON",  "RUSSELL",  "JACOB",  "WILLIAM",  "NADA",  "SAMANTHA",  "IAN",  "MARC",  "ANJINI",  "JEREMY",  "LAUREN",  "KEVIN",  "RAVINDRA",  "SADI",  "EMILY",  "GITAE",  "MAY",  "MAHIR",  "VIVIAN",  "GABRIEL",  "BRIANNA",  "JUN HONG",  "JOSEPH",  "MATTHEW",  "JAMES",  "THOMAS",  "NICOLE",  "KAREN"],
+           8:["ALEKSANDRA",  "NAKIB",  "AMEER",  "HENRY",  "DONALD",  "YAT LONG",  "SEBASTIAN",  "DAVID",  "YUKI",  "SHAFIUL",  "DANIEL",  "SELENA",  "JOSEPH",  "SHINJI",  "RYAN",  "APRIL",  "ERICA",  "JIAN HONG",  "VERIT",  "JOSHUA",  "WILSON",  "AAHAN",  "GORDON",  "JUSTIN",  "MAYA",  "FAIYAZ",  "SHREYA",  "ERIC",  "JEFFERY",  "BRIAN",  "KEVIN",  "SAMSON",  "BRIAN",  "HARRY",  "WANYING"]
+         }
+
+
+listofkeys= list(krewes.keys()) # for when there are keys
+keyIndice = random.randint(0, len(listofkeys)-1)
+
+valueIndice = random.randint(0, len(krewes[listofkeys[keyIndice]])-1)
 
 #print(listofkeys)
 
@@ -42,3 +54,15 @@ print(krewes[listofkeys[keyIndice]][valueIndice])
 #    keyIndice = random.randint(0,2)
 #    valueIndice = random.randint(0,2)
 #    print(krewes[listofkeys[keyIndice]][valueIndice])
+
+allDevos = []
+for i in krewes:
+    for j in krewes[i]:
+        allDevos.append(j)
+print(allDevos)
+
+indice = random.randint(0,len(allDevos)-1)
+print(allDevos[indice])
+
+
+# jack and jill, went up the hill, to fetch a pail of water. So they say, the subsequent fall was inevitable, they never stood a chance they were written that way/ 
