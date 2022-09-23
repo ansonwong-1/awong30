@@ -15,6 +15,8 @@ QCC:
 (especially ones that could shorten what we did)
 - Is there a difference in getting a random devo from a list of all devos vs
 getting a random key and then a random value?
+- How could we change our code to have it work with the original krewes dictionary from the care package?
+- We use packages by doing <package name>.<function in package>
 OPS SUMMARY:
 We decided to make a list of the keys and then randomly choose from that list
 because they aren't numerically sequential. After that, we got a random index for both 
