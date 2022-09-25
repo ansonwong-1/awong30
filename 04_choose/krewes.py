@@ -18,7 +18,16 @@ getting a random key and then a random value?
 - How could we change our code to have it work with the original krewes dictionary from the care package?
 - We use packages by doing <package name>.<function in package>
 OPS SUMMARY:
-We decided to make a list of the keys and then randomly choose from that list
+
+Method 1:
+    We added keys to the lists and randomly chose a period and then randomly chose a person from that period
+    using the imported random method
+
+Method 2:
+    We combined all devos into one giant list and randomly selected an index/student.
+    We then used the number of students in each period to see which period said index would into.
+
+We decided to make a list of the keys and then` randomly choose from that list
 because they aren't numerically sequential. After that, we got a random index for both 
 the list of keys and the list of values. With those, we got a random devo in a random period. 
 For this one, we printed the period by printing the random key.
@@ -42,7 +51,7 @@ keyIndice = random.randint(0, len(listofkeys)-1)
 
 valueIndice = random.randint(0, len(krewes[listofkeys[keyIndice]])-1)
 
-print(krewes[listofkeys[keyIndice]][valueIndice] + " Of Period " + str(keyIndice))
+print(krewes[listofkeys[keyIndice]][valueIndice] + " Of Period " + str(listofkeys[keyIndice]))
 
 allDevos = []
 for i in krewes:
