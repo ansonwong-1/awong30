@@ -3,7 +3,7 @@ SS AFK | Anson Wong, Faiza Huda, Kevin Xiao, Truthful Tom, Faizem, FamousMrTable
 Softdev 
 K04 -- Dictionaries
 2022-09-22
-time spent: 0.8
+time spent: 2
 '''
 '''
 DISCO:
@@ -18,7 +18,6 @@ getting a random key and then a random value?
 - How could we change our code to have it work with the original krewes dictionary from the care package?
 - We use packages by doing <package name>.<function in package>
 OPS SUMMARY:
-
 Method 1:
     We added keys to the lists and randomly chose a period and then randomly chose a person from that period
     using the imported random method
@@ -26,17 +25,7 @@ Method 1:
 Method 2:
     We combined all devos into one giant list and randomly selected an index/student.
     We then used the number of students in each period to see which period said index would into.
-
-We decided to make a list of the keys and then` randomly choose from that list
-because they aren't numerically sequential. After that, we got a random index for both 
-the list of keys and the list of values. With those, we got a random devo in a random period. 
-For this one, we printed the period by printing the random key.
-We also used a second method where we made a list of all devos and selected 
-a random index of that list. For the period, we found that out by seeing if the
-random index was less than the number of students in that period and the periods
-before it. 
 '''
-#clean up line 25
 import random
 
 krewes = {
@@ -69,7 +58,7 @@ if (indice > stud2):
     period = 7
     if (indice > stud2 + stud7):
         period = 8
-print(allDevos[indice] + " Of Period " + str(period)) #not sure if this works -Anson
+print(allDevos[indice] + " Of Period " + str(period))
 
 
 # jack and jill, went up the hill, to fetch a pail of water. So they say, the subsequent fall was inevitable, they never stood a chance they were written that way/ 
