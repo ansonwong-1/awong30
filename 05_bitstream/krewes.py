@@ -3,7 +3,7 @@ Bobem | Ivan Yeung, Anson Wong
 SoftDev
 K05 -- Krewes/Python dictionary/We are trying to write a python program that randomly selects a devo from a dictionary after parsing
 9-28-2022
-Time spent:
+Time spent: 1.5
 
 DISCO:
 - You read a textfile in python similarly to how you do so with scanner in java (must open and close) #not so sure about this
@@ -13,9 +13,9 @@ QCC:
 - Readlines doesn't return a string it returns a line
 OPS SUMMARY:
 We started off by printing a string structured in the way given, but made each devo and ducky name unique.
-That string went into our krewes.txt file and we read that and took the first (and only) line of it as the string we worked on
-We made a list of each devo (including period, name, and ducky) and added each one to the dictionary with the keys being the period and values being a list with the name then ducky
-
+That string went into our krewes.txt file and we read that and took the first (and only) line of it as the string we worked on.
+We made a list of each devo (including period, name, and ducky) and added each one to the dictionary with the keys being the period and values being a list with the name then ducky.
+Then, we chose a random devo by using random.choice from the keys (periods) and then random.choice again to choose a devo and their ducky.
 
 """
 
