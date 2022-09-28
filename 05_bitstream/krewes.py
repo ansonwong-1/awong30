@@ -19,8 +19,7 @@ We made a list of each devo (including period, name, and ducky) and added each o
 
 """
 
-#Ivan Yeung's code from 04_choose
-#import random as rng
+import random as rng
 #krewes = {2:["NICHOLAS",  "ANTHONY",  "BRIAN",  "SAMUEL",  "JULIA",  "YUSHA",  "CORINA",  "CRAIG",  "FANG MIN",  "JEFF",  "KONSTANTIN",  "AARON",  "VIVIAN",  "AYMAN",  "TALIA",  "FAIZA",  "ZIYING",  "YUK KWAN",  "DANIEL",  "WEICHEN",  "MAYA",  "ELIZABETH",  "ANDREW",  "VANSH",  "JONATHAN",  "ABID",  "WILLIAM",  "HUI",  "ANSON",  "KEVIN",  "DANIEL",  "IVAN",  "JASMINE",  "JEFFREY"],
 #          7:["DIANA",  "DAVID",  "SAM",  "PRATTAY",  "ANNA",  "JING YI",  "ADEN",  "EMERSON",  "RUSSELL",  "JACOB",  "WILLIAM",  "NADA",  "SAMANTHA",  "IAN",  "MARC",  "ANJINI",  "JEREMY",  "LAUREN",  "KEVIN",  "RAVINDRA",  "SADI",  "EMILY",  "GITAE",  "MAY",  "MAHIR",  "VIVIAN",  "GABRIEL",  "BRIANNA",  "JUN HONG",  "JOSEPH",  "MATTHEW",  "JAMES",  "THOMAS",  "NICOLE",  "Karen"],
 #          8:["ALEKSANDRA",  "NAKIB",  "AMEER",  "HENRY",  "DONALD",  "YAT LONG",  "SEBASTIAN",  "DAVID",  "YUKI",  "SHAFIUL",  "DANIEL",  "SELENA",  "JOSEPH",  "SHINJI",  "RYAN",  "APRIL",  "ERICA",  "JIAN HONG",  "VERIT",  "JOSHUA",  "WILSON",  "AAHAN",  "GORDON",  "JUSTIN",  "MAYA",  "FAIYAZ",  "SHREYA",  "ERIC",  "JEFFERY",  "BRIAN",  "KEVIN",  "SAMSON",  "BRIAN",  "HARRY",  "wanying"]}
@@ -47,13 +46,17 @@ text = f.readlines()[0] #readlines returns a list of the lines- getting the 0th 
 f.close()
 krewes = {}
 devoList = text.split('@@@')
-devoList = devoList[:-1] #getting rid of new line
+devoList = devoList[:-1] #getting rid of new line element
 #print(devoList)
 for devo in devoList:
     pd = devo.split("$$$")[0]
     if (not krewes.has_key(pd)):
         krewes[pd] = [] 
     krewes[pd].append(devo.split("$$$")[1:])
-    
-print(krewes)
+#print(krewes)
+period = rng.choice(list(krewes.keys()))
+devoduck = rng.choice(krewes[period])
+print("Period: " + str(period))
+print("Devo: " + str(devoduck[0]))
+print("Ducky: " + str(devoduck[1]))
 
