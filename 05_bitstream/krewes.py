@@ -6,12 +6,16 @@ K05 -- Krewes/Python dictionary/We are trying to write a python program that ran
 Time spent:
 
 DISCO:
-- You read a textfile in python similarly to how you do so with scanner in java
+- You read a textfile in python similarly to how you do so with scanner in java (must open and close) #not so sure about this
 QCC:
 - Why is there an extra '\\n' element?
-- How can we get rid of that extra element?
-- Is there a way remove the outside [] in our devoList
+- We can get rid of that extra element through list splicing
+- Readlines doesn't return a string it returns a line
 OPS SUMMARY:
+We started off by printing a string structured in the way given, but made each devo and ducky name unique.
+That string went into our krewes.txt file and we read that and took the first (and only) line of it as the string we worked on
+We made a list of each devo (including period, name, and ducky) and added each one to the dictionary with the keys being the period and values being a list with the name then ducky
+
 
 """
 
@@ -41,15 +45,15 @@ for i in range(20):
 f = open('krewes.txt')
 text = f.readlines()[0] #readlines returns a list of the lines- getting the 0th element is the first line
 f.close()
-#print("TEXT:")
-#print(text)
 krewes = {}
 devoList = text.split('@@@')
 devoList = devoList[:-1] #getting rid of new line
 #print(devoList)
 for devo in devoList:
-    pd0 = devo[:1] #:1 when take out pd
-    #print(pd0)
-    if (pd0 != pd1):
-        keyList.append(pd0)
-        pd1 = devo[:1]
+    pd = devo.split("$$$")[0]
+    if (not krewes.has_key(pd)):
+        krewes[pd] = [] 
+    krewes[pd].append(devo.split("$$$")[1:])
+    
+print(krewes)
+
