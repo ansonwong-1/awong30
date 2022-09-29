@@ -15,7 +15,9 @@ QCC:
 OPS SUMMARY:
 We started off by printing a string structured in the way given, but made each devo and ducky name unique.
 That string went into our krewes.txt file and we read that and took the first (and only) line of it as the string we worked on.
-We made a list of each devo (including period, name, and ducky) and added each one to the dictionary with the keys being the period and values being a list with the name then ducky.
+We made a list of each devo (including period, name, and ducky)
+Checked if the dictionary has a key defined(the period) and using has_key function and if it didn't that key was made for the dictionary.
+Added each one to the dictionary with the keys being the period and values being a list with the name then ducky.
 Then, we chose a random devo by using random.choice from the keys (periods) and then random.choice again to choose a devo and their ducky.
 """
 
