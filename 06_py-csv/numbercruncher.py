@@ -41,18 +41,16 @@ def populate_dict(dictionary, filename):
     total_percentage = data[len(data) - 2]
     data = data[1:len(data) - 2]
     csv_file.close()
-    for i in data:
-        if i[0] == "\"":
-            split_index = i.rfind(",")
-            dictionary[i[1:split_index - 1]] = float(i[split_index + 1:])#[1:split_index - 1] removes " at the beginning the end
+    for line in data:
+        occ = line.rsplit(',', 1) #finds the first comma from the right and splits there
+        if (occ[0] != 'Job Class'): #first one occ[1] can't be converted to a percentage
+            dictionary[occ[0]] = float(occ[1])
         else:
-            job_weight = i.split(",")
-            dictionary[job_weight[0]] = float(job_weight[1])
-
+            dictionary[occ[0]] = occ[1]
     return total_percentage.split(",")
 
-def choose_weighted(choices, weights): # the choices and weights correspond based on their index in the list
-    random_value = rng.random() * 99.8
+def choose_weighted(choices, weights, total): # the choices and weights correspond based on their index in the list
+    random_value = rng.random() * total
     #print(random_value)
     value = 0
     index = 0
@@ -82,18 +80,18 @@ for i in occupations:
     test[i] = 0
     test2[i] = 0
 for i in range(100000):
-    test[choose_weighted(occupations, weights)] += 1.0
+    test[choose_weighted(occupations, weights, 99.8)] += 1.0
     test2[rng.choices(list(krewes.keys()), weights = list(krewes.values()))[0]] += 1.0
 for i in occupations:
     test[i] /= 1000
     test2[i] /= 1000
 
-print(krewes)
+#print(krewes)
 #This is the other method just using the dictionary
 #print(rng.choices(list(krewes.keys()), weights = list(krewes.values()))[0])
-print()
-print(test)
-print()
-print(test2)
-
-    
+#print()
+#print(test)
+#print()
+#print(test2)
+print(choose_weighted(occupations,weights, 99.8))
+#print(rng.choices(list(krewes.keys()), weights = list(krewes.values()))[0])
