@@ -1,7 +1,24 @@
-# New Deal  
-*Fang Min Chen*  
-*Ryan Lau*  
-*Anson Wong*  
+New Deal: Fang Min Chen, Ryan Lau, Anson Wong
 
-# Notes
+plan:
+ - choose a random occupation algo from teammates k06
+ - add the algo into file 
+ - return fstring with roster, random occupation, and list of occupations
+ - make it look nice
+
+discos & notes:
+ - whatever gets returned is what shows up in the browser
+ - random.choices(occupations, weights) is an optimized way of choosing random weighted choices
+ - list(dict.keys()) is same as list(dict). maybe?
+ - <br> = \n in html
+ - <ul>
+    <li>thing</li>
+    <li>thing</li>
+    <li>thing</li>
+    <li>thing</li>
+   </ul> = bulleted list in html
+ - <strong>thing</strong> = bold in html
+ - whatever is in the fxn gets rerun if browser is refreshed
+ - app.run() is important!
+
 
