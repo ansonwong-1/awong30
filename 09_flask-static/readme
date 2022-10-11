@@ -1,0 +1,14 @@
+New Deal: Fang, Ryan, Anson
+
+Predictions: 
+- app.py will print "the __name__ of this module is... __main__"
+  in the terminal and turn on debug mode
+- Local host displays "No hablo queso!"
+- "Is this plaintext, though?" will be displayed in http://localhost:5000/static/foo.html
+- Everything in foo will be displayed in http://localhost:5000/static/foo
+
+Breaking Disco:
+- http://localhost:5000/static/foo downloads the file foo onto local desktop
+
+QCC:
+- Is <!DOCTYPE html> necessary? If so, why?
