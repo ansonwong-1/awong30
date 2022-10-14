@@ -1,0 +1,23 @@
+# New Deal: Fang, Anson, Ryan
+# SoftDev
+# Oct-13-2022
+# K10 -- Flask JINJA
+# time spent: 1 hrs
+
+A0:
+Line 18 will return an error message in the terminal saying it cannot find render_template
+  and cease run.
+
+Test0:
+app.py ran in the terminal and printed...
+  127.0.0.1 - - [13/Oct/2022 09:12:23] "GET /my_foist_template HTTP/1.1" 500 -
+"No hablo queso!" displayed upon requesting 127.0.0.1:5000/ in the web browser
+"NameError: name 'render_template' is not defined" and debug traceback displayed upon 
+  requesting 127.0.0.1:5000/my_foist_template in the web browser
+
+A1:
+Yep, we predicted 127.0.0.1:5000/my_foist_template, which rendered in the browser
+
+A2: 
+render_template( template_filename , setVar0, setVar1 ), where the setVar's are passing in
+  variables with their values to replace the variables in the template.
