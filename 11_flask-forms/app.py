@@ -30,7 +30,7 @@ PROTIP: Insert your own in-line comments
    understand what is going on.
 '''
 
-@app.route("/", methods=['POST'])
+@app.route("/")#, methods=['POST'])
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
