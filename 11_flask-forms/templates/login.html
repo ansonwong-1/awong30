@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- 
+  New Deal: Fang, Anson, Ryan
+  SoftDev
+  Oct-14-2022
+  K11 -- forms
+  time spent: 1 hrs
+
+     simple demo of HTML forms via Flask
+     
+     trioTASK:
+     If any member of team has forms experience, let their know-how OSMOTE.
+     If no one does, seek external assistance.
+     
+     PROTIP: Revisit code from intro if you have it.
+     Peruse this code together and discuss how it should work,
+       in conjunction with the back end apparatus.
+ -->
+
+
+<html>
+
+  <head>
+    <title> LOGIN PAGE </title>
+  </head>
+
+  <body>
+    <h1>
+      New Deal: Fang, Anson, Ryan
+      SoftDev
+
+      Oh wait, hi, move along to le form...
+    </h1>
+
+    <h3>
+      Enter your username and password below to proceed.
+    </h3>
+    <form action="/auth"> <!--modifies the route--> 
+      <input type="text" name="username">
+      <input type="text" name="password">
+      <input type="submit" name="sub1">
+    </form>
+    <br>
+  </body>
+
+</html>

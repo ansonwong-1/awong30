@@ -1,0 +1,24 @@
+# New Deal: Fang, Anson, Ryan
+# SoftDev
+# Oct-14-2022
+# K11 -- forms
+# time spent: 1 hrs
+
+Predictions:
+
+What does @app.route("/", methods=['GET', 'POST']) do?
+Defaults to allow "getting"--access contents--and "posting"--uploading data
+
+If we run localhost/, renders login.html only if methods include 'GET'
+
+Disco:
+
+127.0.0.1:5000/auth?username=NewDeal&sub1=Submit
+After form submission, Flask sends a get request, and
+runs authenticate() from app.py, which returns a string.
+Browser updates the page to the new route.
+
+Methods not allowed for requested URL when methods=['POST']
+
+QCC:
+Where do the inputs from the form submission go?
