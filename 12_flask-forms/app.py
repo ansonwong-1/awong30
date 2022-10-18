@@ -1,6 +1,8 @@
-# Clyde 'Thluffy' Sinclair
+# Flying Turtles | Anson Wong, Nicholas Tarsis
 # SoftDev
-# Oct 2022
+# K12 -- Echoing Site Visitor Input via an HTML Form
+# 2022-10-17
+# time spent: 1
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -27,7 +29,7 @@ PROTIP: Insert your own in-line comments
    understand what is going on.
 '''
 
-@app.route("/") #, methods=['GET', 'POST'])
+@app.route("/",)# methods=['GET', 'POST'])
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
@@ -37,13 +39,16 @@ def disp_loginpage():
     print("***DIAG: request.args ***")
     print(request.args)
     #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
+    #print(request.args['username']) # won't work since there's no username inputted yet
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return render_template( 'login.html' )
+    print("***DIAG: request.method ***")
+    print(request.method)
+    return render_template( 'login.html', request = request.method)
+    # {{variable}} in template file can be initialized through additional args in render_template
 
 
-@app.route("/auth") # , methods=['GET', 'POST'])
+@app.route("/auth" , methods=['GET', 'POST'])
 def authenticate():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
@@ -52,11 +57,15 @@ def authenticate():
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
+    print("***DIAG: request.args['username']  ***")
+    print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return "Waaaa hooo HAAAH"  #response to a form submission
+    print("***DIAG: request.form ***")
+    print(request.form)
+    print("***DIAG: request.method ***")
+    print(request.method)
+    return render_template( 'response.html', username = request.args['username'], request = request.method )   #response to a form submission
 
 
 
