@@ -1,0 +1,21 @@
+body {
+    background-color: hwb(0 7% 84%);
+}
+
+.top {
+    background-color: rgb(221, 58, 58);
+    text-align: center;
+}
+
+.middle {
+    background-color: rgb(62, 62, 137);
+}
+
+th {
+    text-align: left;
+}
+
+.bottom {
+    background-color: rgb(54, 173, 54);
+    text-align: right;
+}
