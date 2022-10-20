@@ -14,7 +14,7 @@ def serve_looks():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
     print(app)
-    return render_template('index.html')
+    return render_template('index.html', css = "/static/style.css")
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
