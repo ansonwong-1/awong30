@@ -7,26 +7,12 @@ Sqlite3 is a library that allows users access a database. This how-to will teach
 
 ### Prerequisites:
 
-- Python installed
-- Basic Python Knowledge
+- SQLite3 installed
 
-0. In a python file of your choice, `import sqlite3`.
-1. Connect to a database and create a cursor for it with `<connection_name> = sqlite3.connect("<database name>")` and `<cursor_name> = <connection_name>.cursor()`. The database named will be created if it does not already exist. An example of this is:
-  ```
-  db = sqlite3.connect("foo")
-  c = db.cursor()
-  ```
-2. To create a table, run `<cursor_name>.execute("CREATE TABLE <table_name>(<field_name> <optional data type>, <field_name> ,...)")`. An example of this is:
-```
-c.execute("CREATE TABLE roster(name TEXT, userid INTEGER)")
-```
-You can check if the table exists by doing `<var> = <cursor_name>.execute("SELECT name from sqlite_master")` and `print(<var>.fetchone())`, which will fetch the first table name or `print(<var>.fetchall())` which will fetch all the table names. Keep in mind that the order matters and if you execute a different statement before printing, it will return what you executed most recently as execute only executes a single statement at a time.
-3. To insert values, run `<cursor_name>.execute("""INSERT INTO <table_name>(<val0>, <val1>""""));`. The triple quotes make it so you can have single quotes, which you need if you've specified a column data type as TEXT. The order will correspond to the order of the columns.
-4. To view these records, 
-- For all records in all fields, run `<var>= <cursor_name>.execute("SELECT * from <table_name>")`
-- For each record in field, run `<var>= <cursor_name>.execute("SELECT <field_name> from <table_name>")`
-and run `print(<var>.fetchall())`
-
+0. Run `sqlite3 <db name>` in your terminal
+1. To create a table, run `CREATE TABLE <table_name>(<field_name0> <optional data type>, <field_name1> ,...);`. You can check if this table exists with `.tables`.
+3. To insert values and create a record, run `INSERT INTO <table_name>(<val0>, <val1>""""));`. The order will correspond to the order of the fields when you created the table.
+4. To view all records, run `SELECT <field_name> from <table_name>;`. This will return a list of the field values.
 
 
 ### Resources
