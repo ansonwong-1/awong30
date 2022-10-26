@@ -3,3 +3,8 @@ SoftDev
 K18 -- (Python + SQLite)3
 2022-10-25
 time spent: 0.5
+
+
+QCC:
+- When a field is specified as TEXT, you must either specify it as a string with a single set of quotation marks and have triple quotations around the entire INSERT INTO statement or use an f string or \"\"
+- Printing fetchall() prints the values selected with execute
