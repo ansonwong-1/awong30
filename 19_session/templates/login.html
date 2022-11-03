@@ -1,3 +1,10 @@
+<!--
+Flying Turtles | Anson Wong, Nicholas Tarsis
+SoftDev
+K19 - Login
+2022-11-03
+time spent: 1
+-->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,13 +12,14 @@
     <title>Login Page</title>
   </head>
   <body>
-    <h1>Team Flying Turtles: Nicholas Tarsis, Anson Wong</h1>
+    <h1>Flying Turtles: Nicholas Tarsis, Anson Wong</h1>
     <form method="post">
       <label for="user">Username:</label><br>
       <input type="text" id="user" name=username><br>
       <label for="pass">Password:</label><br>
       <input type="text" id="pass" name="password"><br>
-      <input type=submit value=Login>
+      <p>{{error}}</p><br>
+      <input type=submit id= "submit" value=Login>
     </form>
     <br>
   </body>

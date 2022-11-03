@@ -1,0 +1,11 @@
+Flying Turtles | Anson Wong, Nicholas Tarsis
+SoftDev
+K19 - Login
+2022-11-03
+time spent: 1
+
+DISCO:
+
+QCC:
+- We can add labels for form inputs with <label for="{id}">{label text}</label> where {} denotes a field.
+We used them to let users know where to input username and password.
