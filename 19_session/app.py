@@ -11,12 +11,7 @@ def login():
     if request.method == 'POST':
         session['username'] = request.form['username']
         return redirect(url_for('login_attempt'))
-    return '''
-        <form method="post">
-            <p><input type=text name=username>
-            <p><input type=submit value=Login>
-        </form>
-    '''
+    return render_template('login.html')
 @app.route("/login_attempt")
 def login_attempt():
     if 'username' in session:
