@@ -5,7 +5,9 @@ K19 - Login
 time spent: 1
 
 DISCO:
-
+- We can use os.urandom(<size>) to generate a string of random bytes of the specified size. We used this for our key.
+- To see cookies, open dev console, go to storage, click cookies. (Ryan Lau on Piazza)
 QCC:
 - We can add labels for form inputs with <label for="{id}">{label text}</label> where {} denotes a field.
 We used them to let users know where to input username and password.
+- Redirect can be used with url_for or with the '<file_name>'. 
