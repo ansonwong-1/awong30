@@ -1,0 +1,11 @@
+DISCO:
+    -requests library can be used to send get requests to external
+    servers.  Param dict can be provided as a list of parameters for a
+    get request
+    -json module can be used to convert json string into python dictionary
+    -e.g. json.loads(stringName)
+    -<img src = "urlName"> can be used to display images from another webpage
+QCC:
+    -is there any way to send get requests to an external server
+    within flask or using an inbuilt python library?
+    -
