@@ -20,7 +20,8 @@ def display_image():
     nasa_json = response.content
     nasa_dict = json.loads(nasa_json)
     image_url = nasa_dict["url"]
-    return render_template("main.html", image_url=image_url)
+    nasa_info = nasa_dict['explanation']
+    return render_template("main.html", image_url=image_url, info = nasa_info)
 if __name__ == "__main__":
     app.debug = True
     app.run()
