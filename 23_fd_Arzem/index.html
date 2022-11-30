@@ -1,76 +1,36 @@
-<!--
-Arzem -- Anson Wong, Sam Lubelsky
-SoftDev
-K23 -- Foundation- Frontend Frameworks
-2022-11-28
-time spent: 0.5 hrs
--->
-<!DOCTYPE html>
+<!doctype html>
 <html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css" integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA==" crossorigin="anonymous">
+    
+    </head>
+    <body>
+        <h1>Foundation gives you access to many useful css templates</h1>
+        <button type = "button" class="small success button"> Like this small success button!</button><br>
+        <button type = "button" class="tiny alert button"> And this tiny alert one</button><br>
+        <button type = "button" class="large warning button"> And also this large warning one</button><br>
+        <button type = "button" class="expanded button"> This one is considered expanded</button>
 
-<head>
-    <meta charset="utf-8">
-    <title>Foundation Features by Arzem=</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation.min.css">
-</head>
-<h2>Arzem -- Anson Wong, Sam Lubelsky</h2>
-<h3>Forms</h3>
-<body>
-  <div class="row">
-    <div class="small-3 columns">
-      <label>Select from Dropdown Menu
-        <select>
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
-      </label>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Checkboxes</label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-    </div>
-  </div>
-
-  <label>Radio -- You can only choose one.</label>
-  <div class="switch small">
-    <input id="exampleRadioSwitch1" type="radio" checked name="testGroup">
-    <label for="exampleRadioSwitch1">Radio1</label>
-  </div>
-  <div class="switch radius">
-    <input id="exampleRadioSwitch2" type="radio" name="testGroup">
-    <label for="exampleRadioSwitch2">Radio2</label>
-  </div>
-  <div class="switch round large">
-    <input id="exampleRadioSwitch3" type="radio" name="testGroup">
-    <label for="exampleRadioSwitch3">Radio3</label>
-  </div>
-
-  <form>
-  <div class="row">
-    <div class="small-8 columns">
-      <div class="row">
-        <div class="small-3 columns">
-          <label for="right-label" class="right inline">Type Smtg</label>
-        </div>
-        <div class="small-9 columns">
-          <input type="text" id="right-label" placeholder="Over Here">
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
-
-<h3>Different Buttons</h3>
-<a href="#" class="button tiny">Tiny Button</a>
-<a href="#" class="button small">Small Button</a>
-<a href="#" class="button">Default Button</a>
-<a href="#" class="button disabled">Disabled Button</a>
-<a href="#" class="button large">Large Button</a>
-<a href="#" class="button expand">Expanded Button</a>
-
-</body>
+      <div class = "callout">
+        <button class = "close-button" aria-label = "Close alert" type = "button">
+           <span aria-hidden = "true"> </span>
+        </button>
+        <p>You just have to import the foundation stylesheet
+            in the head, then you have access to many classes you can use,
+            like the buttons from above.</p>
+     </div>
+     <h1> Lets see what else we can easily do with foundation!</h1>
+     <h2>Flex Video Example</h2>
+     <div class = "flex-video">
+        <iframe width = "200" height = "200" src = "https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+     </div>
+     <h1> Lets add some pages!</h1>
+    <ul class = "pagination">
+        <li class = "disabled"> Previous</li>
+        <li class = "current"> 1 </li>
+        <li><a href="index.html">Go to kitchen sink</a></li>
+        <li><a href="#">3</a></li>
+    </ul>
+    <div class = "slider"></div>
+    </body> 
 </html>
