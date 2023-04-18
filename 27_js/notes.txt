@@ -1,21 +1,16 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-SoftDev pd0
+Team Insert: Anson Wong, Talia Hsia
+SoftDev pd2
 K27 -- Basic functions in JavaScript
-2023-04-03t
+2023-04-03
 
 DISCO
 -----------------------------------------------------------------
-* Ooooh, ___
-* Aaah-haa!  ____
-* ...
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* Why...?
-* Huh?
-* Teh whah now?
-* ...
+For a refresher on scheme, we referenced Wilson's post (https://docs.google.com/document/d/1NhtMxH0X87WPxXydOctrEYlG-4UaQ3uePb3QQhvvODs/edit)
+How can we implement if and else if?
 =================================================================
 
 
