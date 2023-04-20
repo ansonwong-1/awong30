@@ -1,32 +1,13 @@
-/*
-   your PPTASK:
-   
-   Test drive each bit of code in this file,
-    and insert comments galore, indicating anything
-     you discover,
-    	have questions about,
-    		or otherwise deem notable.
-    		
-    		Write with your future self or teammates in mind.
-    		
-    		If you find yourself falling out of flow mode, consult 
-    		other teams
-    		MDN
-
-   A few comments have been pre-filled for you...
-   
-   (delete this block comment once you are done)
-*/
-
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
-// SoftDev pd0
+// Team Insert :: Anson Wong, Talia Hsia
+// SoftDev pd2
 // K28 -- Getting more comfortable with the dev console and the DOM
-// 2023-04-05w
+// 2023-04-19
 // --------------------------------------------------
 
 
 //send diagnostic output to console
 //(Ctrl-Shift-K in Firefox to reveal console)
+//used ctrl-shift-j in edge
 console.log("AYO");
 
 var i = "hello";
@@ -88,7 +69,28 @@ var stripe = function() {
 // FIB
 // FAC
 // GCD
+function fact(n){
+  if (n < 2){
+      return 1;
+  }return (n * (fact(n - 1)));
+}
 
+function fib(n){
+  if(n < 2){
+      return n;
+  }return (fib(n - 1) + fib(n - 2));
+}
+
+const gcd = (n1, n2) =>{
+  if (n1 % n2 == 0){
+    return n2;
+  }
+  if (n2 % n1 == 0){
+    return n1;
+  }
+  return gcd(n2, n1 % n2);
+}
+console.log(gcd(18,24));
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
 //  Note anything notable.
