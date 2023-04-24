@@ -4,6 +4,7 @@ SoftDev pd2
 K30 -- canvas based JS drawing
 2023-04-24
 */
+
 //draw rectangle top left corner at click
 //draw circle center at click
 //rect|circ -> circle -> rectangle
@@ -43,6 +44,8 @@ var drawCircle = (e) => {
     ctx.beginPath();
     ctx.fillStyle = "red";
     ctx.arc(mouseX, mouseY, 50, 0, Math.PI * 2, true);
+    ctx.fill();
+    ctx.stroke();
     
 }
 
