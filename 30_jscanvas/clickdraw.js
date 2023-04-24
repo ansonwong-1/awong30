@@ -5,9 +5,6 @@ K30 -- canvas based JS drawing
 2023-04-24
 */
 
-//draw rectangle top left corner at click
-//draw circle center at click
-//rect|circ -> circle -> rectangle
 
 //retrieve node in DOM via ID
 var c = document.getElementById("slate");
@@ -25,6 +22,9 @@ var toggleMode = (e) => {
     }else{
         mode = "rect";
     }
+    var bToggler = document.getElementById("buttonToggle");
+    //rect|circ -> circle -> rectangle -> circle
+    bToggler.innerHTML = mode;
 }
 
 var drawRect = (e) => {
