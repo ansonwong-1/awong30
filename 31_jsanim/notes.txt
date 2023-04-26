@@ -1,0 +1,4 @@
+Team :: Brian Chen, Anson Wong
+SoftDev pd2
+K31 -- canvas based JS animation
+2023-04-26w
