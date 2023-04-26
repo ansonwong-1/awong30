@@ -23,8 +23,6 @@ var drawDot = () => {
     window.cancelAnimationFrame(requestID);
     clear();
     ctx.beginPath();
-    //although fillstyle matches what we assigned it, our circles are black?
-    //console.log(ctx.fillstyle);
     ctx.arc(250,250, radius, 0, Math.PI * 2, true);
     ctx.fill();
     if (growing){
