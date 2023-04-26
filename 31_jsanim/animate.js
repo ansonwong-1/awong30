@@ -4,7 +4,7 @@ var stopButton = document.getElementById("buttonStop");
 
 var ctx = c.getContext("2d");
 
-ctx.fillstyle = "red";
+ctx.fillStyle = "red";
 
 var requestID;
 
